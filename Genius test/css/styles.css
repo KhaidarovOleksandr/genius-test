@@ -199,18 +199,24 @@ a {
 /* Cheft section*/
 
 .chef-title{
-    margin-bottom: 16px;
-    font-size: 40px;
-    font-weight: 600;
+    position: relative;
+    margin: 0 auto 80px;
     
 }
 .chefs-title::before,
 .chefs-title::after {
+    position: relative;
     display: block;
+    position: absolute;
     width: 352px;
     border: 2px solid var(--color-brand-light);
     content: '' ;
-
+}
+.chefs-title::before {
+    left: 0;
+}
+.chefs-title::after {
+    right: 0;
 }
 .chefs-list {
     display: flex;
@@ -319,6 +325,31 @@ a {
 /* Footer */
 .footer {
     padding: 32px 0;
+    position: relative;
+    background-image: url('../imeges/Footer-background.png');
+    background-color: var(--color-primery-dark);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.footer::before,
+.footer::after {
+    position: absolute;
+    background-repeat: no-repeat;
+    bottom: 0;
+    content: '';
+}
+.footer::before {
+    width: 180px;
+    height: 120px;
+    left: 0;
+    background-image: url('../imeges/decor-bread-small.png');
+}
+.footer::after {
+    width: 380px;
+    height: 190px;
+    right: 0;
+    background-image: url('../imeges/decor-bread-large.png');
 }
 .footer-container{
     display: flex;
@@ -358,10 +389,33 @@ a {
     color: var(--bakery-landing-1-4, #A18268);
     font-size: 14px;
 }
-.footer {
-    background-image: url('../imeges/Footer-background.png');
-    background-color: var(--color-primery-dark);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+/* Modal */
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+}
+.modal {
+    position: relative;
+    width: 800px;
+    height: 800px;
+    background-color: var(--color-primery-ligt);
+    border-radius: 32px;
+}
+.modal-btn-close {
+    position: absolute;
+    top: 40px;
+    right: 40px;
 }
