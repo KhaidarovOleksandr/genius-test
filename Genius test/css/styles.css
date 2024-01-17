@@ -430,11 +430,58 @@ a {
     max-width: 880px;
     height: 100%;
     max-height: 880px;
+    padding: 128px;
     background-color: var(--color-primery-ligt);
     border-radius: 32px;
+    overflow-y: auto;
 }
 .modal-btn-close {
     position: absolute;
     top: 40px;
     right: 40px;
+}
+/* Form */
+.form-field {
+    margin-bottom: 32px;
+}
+.from-label {
+    display: block;
+}
+.form-imput {
+    padding: 16px 42px;
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.17;
+    border-radius: 8px;
+    border: 1px solid var(--color-secondary-dark);
+    background-color: transparent;
+}
+.form-imput:focus {
+    border: var(--color-brand-normal); 
+    outline: none;
+}
+.form-imput::placeholder {
+    color: var(--color-secondary-dark);
+    font-size: 16px;
+    line-height: 1.17;
+}
+.form-imput :focus::placeholder {
+ color: var(--color-primery-dark);
+}
+.form-button {
+    display: block;
+    margin: 0 auto 24px;
+}
+.form-terms {
+    margin: 0 auto;
+    max-width: 220px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+}
+.form-terms-link {
+    color: var(--color-primery-dark);
+    text-underline-offset: 2px;
+    
 }
